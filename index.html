@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css"/>
+  <title>Resume Builder</title>
+</head>
+<body>
+  <h1>Select your sections</h1>
+
+  <ul id="sections" class="sections">
+    <li class="section" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" 
+    ondragend="handleDragEnd(event)">
+    <div class="section-drag-handle"><i class="fa fa-bars"></i></div>
+      <div class="section-actions">
+        <button class="btn" onclick="showDescription('section1')"><i class="fa fa-info"></i></button>
+      </div>
+      <span class="section-name" id="section1Name">Profile Summary </span>
+      <div class="section-actions">
+        <button class="btn" onclick="editSectionName('section1')"><i class="fa fa-pencil"></i></button>
+
+        <label class="switch">
+            <input type="checkbox" checked="checked" onchange="toggleSection('section1')">
+            <span class="slider round"></span>
+          </label>
+      </div>
+    </li>
+    
+    <li class="section" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondragend="handleDragEnd(event)">
+        <div class="section-drag-handle"><i class="fa fa-bars"></i></div>
+        <div class="section-actions">
+        <button class="btn" onclick="showDescription('section2')"><i class="fa fa-info"></i></button>
+        </div><span class="section-name" id="section2Name">Academic and Cocurricular Achievements</span>
+      <div class="section-actions">
+        <button class="btn" onclick="editSectionName('section2')"><i class="fa fa-pencil"></i></button>
+        <label class="switch">
+            <input type="checkbox" checked="checked" onchange="toggleSection('section2')">
+            <span class="slider round"></span>
+          </label>
+      </div>
+    </li>
+    
+    <li class="section" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondragend="handleDragEnd(event)">
+        <div class="section-drag-handle"><i class="fa fa-bars"></i></div>
+        <div class="section-actions">
+        <button class="btn" onclick="showDescription('section3')"><i class="fa fa-info"></i></button>
+      </div>
+      <span class="section-name" id="section3Name">Summer Internship Experience</span>
+      <div class="section-actions">
+         
+        <button class="btn" onclick="editSectionName('section3')"><i class="fa fa-pencil"></i></button>
+        <label class="switch">
+            <input type="checkbox" checked="checked" onchange="toggleSection('section3')">
+            <span class="slider round"></span>
+          </label>
+      </div>
+    </li>
+
+    <li class="section" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondragend="handleDragEnd(event)">
+        <div class="section-drag-handle"><i class="fa fa-bars"></i></div>
+        <div class="section-actions">
+        <button class="btn" onclick="showDescription('section4')"><i class="fa fa-info"></i></button>
+      </div>
+      <span class="section-name" id="section4Name">Work Experience</span>
+      <div class="section-actions">
+         
+        <button class="btn" onclick="editSectionName('section4')"><i class="fa fa-pencil"></i></button>
+        <label class="switch">
+            <input type="checkbox" checked="checked" onchange="toggleSection('section4')">
+            <span class="slider round"></span>
+          </label>
+      </div>
+    </li>
+    <li class="section" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondragend="handleDragEnd(event)">
+        <div class="section-drag-handle"><i class="fa fa-bars"></i></div>
+        <div class="section-actions">
+        <button class="btn" onclick="showDescription('section5')"><i class="fa fa-info"></i></button>
+      </div>
+      <span class="section-name" id="section5Name">Projects</span>
+      <div class="section-actions">
+        <button class="btn" onclick="editSectionName('section5')"><i class="fa fa-pencil"></i></button>
+        <label class="switch">
+            <input type="checkbox" checked="checked" onchange="toggleSection('section5')">
+            <span class="slider round"></span>
+          </label>
+      </div>
+    </li>
+    <li class="section" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondragend="handleDragEnd(event)">
+        <div class="section-drag-handle"><i class="fa fa-bars"></i></div>
+        <div class="section-actions">
+        <button class="btn" onclick="showDescription('section6')"><i class="fa fa-info"></i></button>
+      </div>
+      <span class="section-name" id="section6Name">Certifications</span>
+      <div class="section-actions">
+        <button class="btn" onclick="editSectionName('section6')"><i class="fa fa-pencil"></i></button>
+        <label class="switch">
+            <input type="checkbox" checked="checked" onchange="toggleSection('section6')">
+            <span class="slider round"></span>
+          </label>
+      </div>
+    </li>
+    <li class="section" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondragend="handleDragEnd(event)">
+        <div class="section-drag-handle"><i class="fa fa-bars"></i></div>
+        <div class="section-actions">
+        <button class="btn" onclick="showDescription('section7')"><i class="fa fa-info"></i></button>
+      </div>
+      <span class="section-name" id="section7Name">Leadership Positions</span>
+      <div class="section-actions">
+         
+        <button class="btn" onclick="editSectionName('section7')"><i class="fa fa-pencil"></i></button>
+        <label class="switch">
+            <input type="checkbox" checked="checked" onchange="toggleSection('section7')">
+            <span class="slider round"></span>
+          </label>
+      </div>
+    </li>
+    <li class="section" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondragend="handleDragEnd(event)">
+        <div class="section-drag-handle"><i class="fa fa-bars"></i></div>
+        <div class="section-actions">
+        <button class="btn" onclick="showDescription('section8')"><i class="fa fa-info"></i></button>
+      </div>
+      <span class="section-name" id="section8Name">Extracurricular</span>
+      <div class="section-actions">
+         
+        <button class="btn" onclick="editSectionName('section8')"><i class="fa fa-pencil"></i></button>
+        <label class="switch">
+            <input type="checkbox" checked="checked" onchange="toggleSection('section8')">
+            <span class="slider round"></span>
+          </label>
+      </div>
+    </li>
+    <li class="section" draggable="true" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondragend="handleDragEnd(event)">
+        <div class="section-drag-handle"><i class="fa fa-bars"></i></div>
+        <div class="section-actions">
+        <button class="btn" onclick="showDescription('section9')"><i class="fa fa-info"></i></button>
+      </div>
+      <span class="section-name" id="section9Name">Education</span>
+      <div class="section-actions">
+         
+        <button class="btn" onclick="editSectionName('section9')"><i class="fa fa-pencil"></i></button>
+        <label class="switch">
+            <input type="checkbox" checked="checked" onchange="toggleSection('section9')">
+            <span class="slider round"></span>
+          </label>
+      </div>
+    </li>
+      
+    <!-- Add more sections as needed -->
+  </ul>
+  <div class="container">
+    <button class="button" onclick="saveChanges()" id="saveButton" disabled>Save and Next</button>
+  </div>
+
+  <div id="sectionDescriptions" class="hidden">
+    <h2>Section Descriptions</h2>
+    <div id="section1Description">
+      <h3>Education</h3>
+      <p>Your educational background.</p>
+    </div>
+    <div id="section2Description">
+      <h3>Experience</h3>
+      <p>Your work experience.</p>
+    </div>
+    <div id="section3Description">
+      <h3>Skills</h3>
+      <p>Your skills and competencies.</p>
+    </div>
+    <!-- Add more section descriptions as needed -->
+  </div>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script> -->
+  <script src="func.js"></script>
+</body>
+</html>
